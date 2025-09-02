@@ -7,33 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "NotOwner",
-				"type": "error"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "fallback"
-			},
-			{
-				"inputs": [],
-				"name": "FUND",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "MINI_USD",
+				"name": "decimals",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint8",
 						"name": "",
-						"type": "uint256"
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -41,25 +20,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "WITHDRAW",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "funder",
-						"type": "address"
-					}
-				],
-				"name": "addressToAmountFunded",
+				"name": "description",
 				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "amountFunded",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -68,17 +34,37 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"internalType": "uint80",
+						"name": "_roundId",
+						"type": "uint80"
 					}
 				],
-				"name": "funders",
+				"name": "getRoundData",
 				"outputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"internalType": "uint80",
+						"name": "roundId",
+						"type": "uint80"
+					},
+					{
+						"internalType": "int256",
+						"name": "answer",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updatedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint80",
+						"name": "answeredInRound",
+						"type": "uint80"
 					}
 				],
 				"stateMutability": "view",
@@ -86,20 +72,49 @@
 			},
 			{
 				"inputs": [],
-				"name": "i_owner",
+				"name": "latestRoundData",
 				"outputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"internalType": "uint80",
+						"name": "roundId",
+						"type": "uint80"
+					},
+					{
+						"internalType": "int256",
+						"name": "answer",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updatedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint80",
+						"name": "answeredInRound",
+						"type": "uint80"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "receive"
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -115,7 +130,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FundMe_flattened.sol": "FundMe"
+			"contracts/FundMe_flattened.sol": "AggregatorV3Interface"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
